@@ -1,10 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
     <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <header className="mb-8 flex items-center justify-between py-4 md:mb-12 md:py-8 xl:mb-16">
+        <header className="flex items-center justify-between py-4 md:py-8 ">
           {/* logo - start */}
           <a
             href="/"
@@ -26,36 +27,36 @@ function Navbar() {
           {/* logo - end */}
           {/* nav - start */}
           <nav className="hidden gap-12 lg:flex">
-            <a href="#" className="text-lg font-semibold text-indigo-500">
+            <NavLink to="/" className={({isActive}) => `text-lg font-semibold ${isActive ? "text-indigo-500": " text-gray-600 transition duration-100  hover:text-indigo-500"}`} >
               Home
-            </a>
-            <a
-              href="#"
-              className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+            </NavLink>
+            <NavLink
+              to='/123'
+              className={({isActive}) => `text-lg font-semibold ${isActive ? "text-indigo-500": " text-gray-600 transition duration-100  hover:text-indigo-500"}`}
             >
               Features
-            </a>
-            <a
-              href="#"
-              className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+            </NavLink>
+            <NavLink
+              to='/projects'
+              className={({isActive}) => `text-lg font-semibold ${isActive ? "text-indigo-500": " text-gray-600 transition duration-100  hover:text-indigo-500"}`}
             >
-              Pricing
-            </a>
-            <a
-              href="#"
-              className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+              Projects
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({isActive}) => `text-lg font-semibold ${isActive ? "text-indigo-500": " text-gray-600 transition duration-100  hover:text-indigo-500"}`}
             >
               About
-            </a>
+            </NavLink>
           </nav>
           {/* nav - end */}
           {/* buttons - start */}
-          <a
-            href="#"
+          <NavLink
+            to='/contact'
             className="hidden rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block"
           >
-            Contact Sales
-          </a>
+            Contact Me
+          </NavLink>
           <button
             type="button"
             className="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden"

@@ -8,7 +8,7 @@ function Unknown() {
           <img
             src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?auto=format&q=75&fit=crop&w=600"
             loading="lazy"
-            alt="Photo by Connor Botts" 
+            alt="Photo by Connor Botts"
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
           {/* content - start */}
